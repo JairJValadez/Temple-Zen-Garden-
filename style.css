@@ -1,0 +1,312 @@
+/* GROUP 8 ZEN GARDEN */
+/* VARIABLES */
+/* basic elements */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Scheherazade New", serif;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 1.25em;
+}
+
+/* Start of SIDEBAR DESIGN */
+#css-zen-garden {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#css-zen-garden::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(https://cdn.glitch.me/4c4976e8-b0d0-4c72-8fa7-5a432a873af4%2Ftemple2.jpg?v=1636220813674);
+  background-size: cover;
+  opacity: 0.25;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  padding: 1em;
+  color: #111E6C;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+header > h2 {
+  font-size: 2.5em;
+  padding: 0.5em;
+  border-radius: 20px;
+  width: 40%;
+  color: #FFCA0A;
+  text-align: center;
+  border: 2px solid red;
+  margin-bottom: 0.25em;
+}
+
+.summary {
+  width: 50%;
+  margin-left: 1em;
+}
+
+header, .summary {
+  margin-left: 1em;
+}
+
+.wrapper {
+  border: 2px solid #000000;
+  border-radius: 15px;
+  box-shadow: 0 25px 25px #000000;
+  padding: 1em;
+  margin-left: 1em;
+  width: 36%;
+  background: linear-gradient(#111E6C, #E60F0F);
+  margin-top: -150%;
+}
+
+.wrapper li {
+  list-style: none;
+  color: #FFCA0A;
+}
+
+.wrapper a {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+}
+
+.wrapper h3 {
+  font-size: 2em;
+  color: #FFCA0A;
+  text-decoration: underline;
+}
+
+.design-selection, .design-archives {
+  margin-bottom: 1.5em;
+}
+
+/* End of SIDEBAR DESIGN */
+/* Start of CSS ZEN GARDEN MAIN */
+.main {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 1.2em;
+  clear: both;
+  overflow: hidden;
+  padding: 1em;
+}
+
+.explanation, .participation, .requirements {
+  grid-column: 2/3;
+}
+
+.benefits {
+  grid-column: 1/2;
+}
+
+.preamble {
+  border-radius: 0 50px;
+  background: #b1aeae;
+  padding: 1.5em;
+  width: 58%;
+  margin-left: 41%;
+}
+
+.explanation {
+  background: #111E6C;
+  color: #ffffff;
+  padding: 2em;
+  border-radius: 2em/5em;
+}
+
+.participation {
+  background: #FFCA0A;
+  padding: 4em;
+  border-radius: 200px 20px;
+}
+
+.participation a {
+  color: #000000;
+}
+
+.benefits {
+  background: #E60F0F;
+  color: #ffffff;
+  border-radius: 20px 600px;
+  padding: 10em;
+}
+
+.requirements {
+  background: lime;
+  padding: 3em;
+  border-radius: 8em 1em 12em/5em 8em;
+}
+
+footer {
+  grid-column: 1/3;
+  font-size: 2.5em;
+  background-color: #000000;
+  padding: 1.5em;
+  text-align: center;
+  border-radius: 2em 1em 4em/0.5em 3em;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+/*Mobile version*/
+@media screen and (max-width: 700px) {
+  #css-zen-garden::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(https://cdn.glitch.me/4c4976e8-b0d0-4c72-8fa7-5a432a873af4%2Ftemple.jpg?v=1636220806371);
+    background-size: cover;
+    opacity: 0.25;
+  }
+
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    align-items: center;
+  }
+
+  .intro {
+    grid-column: 1/5;
+    align-items: center;
+    width: 95%;
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  header > h2 {
+    width: 100%;
+  }
+
+  .summary {
+    width: inherit;
+    align-content: center;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+  .preamble {
+    align-content: center;
+    margin-left: 0%;
+    margin-top: 20px;
+  }
+
+  .main {
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+    align-items: center;
+  }
+
+  .explanation {
+    grid-column: 2/6;
+    grid-row: 3/4;
+  }
+
+  .participation {
+    grid-column: 2/6;
+    grid-row: 4/5;
+  }
+
+  .benefits {
+    grid-column: 2/6;
+    grid-row: 5/6;
+    padding: 5.5em;
+  }
+
+  .requirements {
+    grid-column: 2/6;
+    grid-row: 6/7;
+  }
+
+  footer {
+    grid-column: 2/6;
+    grid-row: 8/9;
+  }
+
+  .sidebar {
+    grid-column: 1/5;
+    width: 100%;
+    align-self: center;
+  }
+
+  .wrapper {
+    width: 80%;
+    margin-top: 0%;
+    margin-left: 10%;
+  }
+
+  /*.sidebar{
+      width: 35%;
+      height: 100%;
+      padding: 7px;
+      float: left;
+      position: relative;
+      z-index: 2;
+      transition: all 1s ease-out; 
+      transform: translateX(-100%);
+  } This would be the sliding menu but we can't touch the html*/
+}
+/*Menu links animation*/
+a {
+  text-decoration: none;
+}
+
+nav a {
+  position: relative;
+  z-index: 1;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffca0a;
+  z-index: -1;
+  transition: transform 350ms ease-in;
+  transform: scaleX(0.001);
+  transform-origin: left;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+/* End of CSS ZEN GARDEN MAIN */
+
+/*# sourceMappingURL=style.css.map */
