@@ -9,7 +9,7 @@ $color-3: #E60F0F; // Red
 $color-4: #FFCA0A; // Sunglow
 $color-5: #ffffff; // White
 $color-6: #b1aeae; // Gray
-$color-7: lime; // Gray
+$color-7: #19191a; // Gray
 
 /* basic elements */
 *{
@@ -148,20 +148,21 @@ header, .summary{
 }
 
 .explanation{
-    background: $color-1;
+    background: $color-7;
     color: $color-5;
     padding: 2em;
     border-radius: 2em / 5em;
 }
 
 .participation{
-    background: $color-4;
+    background: $color-1;
+    color: $color-5;
     padding: 4em;
     border-radius: 200px 20px;
 }
 
 .participation a{
-    color: $color-2;
+    color: $color-5;
 }
 
 .benefits{
@@ -172,7 +173,8 @@ header, .summary{
 }
 
 .requirements{
-    background: $color-7;
+    background: $color-4;
+    color: $color-2;
     padding: 3em;
     border-radius: 8em 1em 12em / 5em 8em;
 }
